@@ -1,17 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Nav from '../components/nav'
+import Logo from '../components/header'
 
 const Home = () => (
   <div>
     <Head>
       <title>Home</title>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
 
-    <Nav />
-
     <div className='hero'>
+      <Logo />
       <h1 className='title'>🔜</h1>
       <p className='description'>
         There will be something awesome coming here... soon!
