@@ -1,9 +1,16 @@
 // import App from 'next/app'
+import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import theme from '../theme'
 
 import 'normalize.css/normalize.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
