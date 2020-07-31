@@ -1,13 +1,13 @@
 export default {
   fonts: {
-    heading: '"Exo 2", sans-serif',
-    body: '"Open Sans", sans-serif',
+    heading: '"Poppins", sans-serif',
+    body: '"Poppins", sans-serif',
   },
   colors: {
-    text: '#55565C',
-    heading: '#12121E',
+    text: '#45539C',
+    heading: '#000469',
     background: '#fff',
-    primary: '#0009FF',
+    primary: '#FF007A',
   },
   styles: {
     root: {

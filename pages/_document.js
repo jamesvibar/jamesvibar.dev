@@ -13,13 +13,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             as="font"
             crossOrigin=""
           />

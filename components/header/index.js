@@ -44,7 +44,7 @@ const NavList = () => {
       }}
     >
       {navigation.map((item) => (
-        <li>
+        <li key={item.title}>
           <NavLink href="/test">{item.title}</NavLink>
         </li>
       ))}
