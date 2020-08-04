@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 export default function index({ children, ...rest }) {
   return (
-    <div sx={{ width: '83.33%', ml: 'auto', mr: 'auto', position: "relative"  }} {...rest}>
+    <div sx={{ width: ['92%', '83.33%'], ml: 'auto', mr: 'auto', position: "relative"  }} {...rest}>
       {children}
     </div>
   )

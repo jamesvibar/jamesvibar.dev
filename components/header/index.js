@@ -2,16 +2,16 @@
 import React from 'react'
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
-import Logo from '../elements/logo'
-import Container from '../elements/container'
-import Wrapper from '../elements/wrapper'
+import Logo from '../../elements/logo'
+import Container from '../../elements/container'
+import Wrapper from '../../elements/wrapper'
 
 import { navigation } from '../../config/website'
 
 export default function index() {
   return (
     <Container>
-      <Wrapper sx={{ pt: 5 }}>
+      <Wrapper sx={{ pt: [4, null, 5] }}>
         <nav
           sx={{
             display: 'flex',
@@ -38,9 +38,9 @@ const NavList = () => {
         m: 0,
         p: 0,
         listStyle: 'none',
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        display: ['none', null, 'flex'],
       }}
     >
       {navigation.map((item) => (
@@ -63,6 +63,9 @@ const NavLink = (props) => {
           fontSize: 1,
           fontWeight: 'bold',
           letterSpacing: 1,
+          '&:hover': {
+            color: 'primary'
+          }
         }}
       >
         {props.children}
