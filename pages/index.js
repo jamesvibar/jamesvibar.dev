@@ -1,70 +1,63 @@
+/** @jsx jsx */
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Nav from '../components/nav'
+import { jsx } from 'theme-ui'
+
+import Header from '../components/header'
+import Container from '../elements/container'
+import Wrapper from '../elements/wrapper'
 
 const Home = () => (
-  <div>
+  <>
     <Head>
-      <title>Home</title>
+      <title>James Vibar - Web Developer</title>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
 
-    <Nav />
+    <Header />
 
-    <div className='hero'>
-      <h1 className='title'>🔜</h1>
-      <p className='description'>
-        There will be something awesome coming here... soon!
-      </p>
+    <section sx={{ marginBottom: 6}}>
+      <div sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+        <HeroBgImg src="/images/svg/hero-bg.svg" sx={{ display: ['none', null, 'block']}}/>
+        <HeroBgImg src="/images/svg/hero-bg.svg" flip sx={{ right: 0 }} />
+      </div>
+      <Container>
+        <Wrapper>
+          <div
+            sx={{ textAlign: 'center', pt: [5, 6], maxWidth: 615, mx: 'auto' }}
+          >
+            <div sx={{ position: 'relative'}}>
+              <img src="/images/svg/hero-accent.svg" sx={{ position: 'absolute', top: '-40%', left: 0 }}/>
+              <h1 sx={{ fontSize: [4, 5], mb: 3, lineHeight: 1.15 }}>
+                Kumusta!
+                <br /> I'm James.
+              </h1>
+            </div>
+            <p>
+              <small>"Kumusta is the proper Filipino word for "Hello".</small>
+            </p>
+            <p>
+              I'm a self-taught web developer based in the Philippines with
+              experience in building modern websites and web applications.
+            </p>
+            <p>Learn more <a href="#">about me</a> or jump straight to <a href="#">my work.</a></p>
+            <img src="/images/svg/hero-scroll.svg" sx={{ mt: 3 }}/>
+          </div>
+        </Wrapper>
+      </Container>
+    </section>
+
+    <div sx={{ height: '1000px'}}>
+      Hello world
     </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
-  </div>
+  </>
 )
+
+const HeroBgImg = ({ src, flip, ...rest}) => {
+  return (
+    <img src={src} sx={{ transform: flip ? 'scaleX(-1)' : '', display: 'block', position: 'absolute', maxWidth: ['220px', null,'340px'], width: '100%'}} {...rest} />
+  )
+}
 
 export default Home
