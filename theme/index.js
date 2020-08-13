@@ -10,6 +10,7 @@ export default {
     heading: '#000469',
     background: '#fff',
     primary: '#FF007A',
+    earlyDawn: '#FFF9E6',
   },
   fontSizes: [11, 14, 28, 42, 56, 70],
   styles: {

@@ -10,11 +10,15 @@
   "dependencies": {
     "@theme-ui/color": "^0.3.1",
     "framer-motion": "^2.3.0",
+    "gray-matter": "^4.0.2",
     "next": "9.5.0",
     "normalize.css": "^8.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "theme-ui": "^0.3.1"
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
+    "theme-ui": "^0.3.1",
+    "tinacms": "^0.27.1"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.2.0"
