@@ -74,7 +74,7 @@ const Home = () => (
           <div
             sx={{
               position: 'absolute',
-              background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20.07%), #FFF9E6',
+              background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%), #FFF9E6',
               height: '1000px',
               top: -32,
               left: -42,
@@ -90,6 +90,8 @@ const Home = () => (
           </div>
           <div>
             <WorkItem />
+            <WorkItem flip />
+            <WorkItem />
           </div>
         </Wrapper>
       </Container>
@@ -100,7 +102,7 @@ const Home = () => (
           <div
             sx={{
               position: 'absolute',
-              background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20.07%), #FFF9E6',
+              background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%), #FFF9E6',
               height: '1000px',
               top: -32,
               left: -42,
