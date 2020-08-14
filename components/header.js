@@ -2,13 +2,13 @@
 import React from 'react'
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
-import Logo from '../../elements/logo'
-import Container from '../../elements/container'
-import Wrapper from '../../elements/wrapper'
+import Logo from '../elements/logo'
+import Container from '../elements/container'
+import Wrapper from '../elements/wrapper'
 
-import { navigation } from '../../config/website'
+import { navigation } from '../config/website'
 
-export default function index() {
+export default function Header() {
   return (
     <Container>
       <Wrapper sx={{ pt: [4, null, 5] }}>

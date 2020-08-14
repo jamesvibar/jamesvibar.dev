@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { jsx } from 'theme-ui'
 
 import Header from '../components/header'
+import Footer from '../components/footer'
 import Container from '../elements/container'
 import Wrapper from '../elements/wrapper'
 import Button from '../elements/button'
@@ -204,7 +205,10 @@ const Home = () => (
         </Wrapper>
       </Container>
     </section>
-    <section>Hello</section>
+    <section>
+      CTA
+    </section>
+    <Footer />
   </>
 )
 
