@@ -68,6 +68,7 @@ const Home = () => (
         </Wrapper>
       </Container>
     </section>
+    
     <section sx={{ mb: 6 }}>
       <Container>
         <Wrapper>
@@ -81,7 +82,9 @@ const Home = () => (
               right: -42,
               zIndex: -1,
             }}
-          ></div>
+          >
+            <img sx={{ position: 'absolute', top: '-32px', right: '-42px' }} src="/images/svg/pink-accent.svg" />
+          </div>
           <div sx={{ mt: [6, 7], pt: 4 }}>
             <h2 sx={{ fontSize: 3 }}>Some of my work.</h2>
             <p sx={{ fontSize: ['18px', '21px'], my: 0 }}>
@@ -109,7 +112,9 @@ const Home = () => (
               right: -42,
               zIndex: -1,
             }}
-          ></div>
+          >
+            <img sx={{ position: 'absolute', top: '-32px', left: '-42px', transform: 'scaleX(-1)' }} src="/images/svg/pink-accent.svg" />
+          </div>
           <div sx={{ mt: [6, 7], pt: 4 }}>
             <h2 sx={{ fontSize: 3 }}>My career.</h2>
             <p sx={{ fontSize: ['18px', '21px'], my: 0 }}>

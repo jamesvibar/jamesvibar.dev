@@ -28,7 +28,7 @@ export default function workitem({ flip }) {
       </div>
       <div sx={{ flex: 1 }}>
         <div sx={{ width: ['100%', null, '88%'], marginLeft: !flip && 'auto' }}>
-          <strong sx={{ fontSize: 2, color: 'heading',}}>Tripi.ph</strong>
+          <strong sx={{ fontSize: 2, color: 'heading', mt: [4, null, 0], display: 'inline-block'}}>Tripi.ph</strong>
           <div sx={{ my: 3, display: 'flex', alignItems: 'center' }}>
             <AiOutlineDeploymentUnit />
             <span sx={{ ml: 2 }}>Odoo</span>
