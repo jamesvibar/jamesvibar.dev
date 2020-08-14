@@ -2,6 +2,7 @@
 import React from 'react'
 import { jsx } from 'theme-ui'
 import Container from '../elements/container'
+import Wrapper from '../elements/wrapper'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -15,9 +16,11 @@ export default function Footer() {
       }}
     >
       <Container>
-        <div sx={{ height: '75px', display: 'flex', alignItems: 'center' }}>
-          &copy; {year}
-        </div>
+        <Wrapper>
+          <div sx={{ height: '75px', display: 'flex', alignItems: 'center' }}>
+            &copy; {year}
+          </div>
+        </Wrapper>
       </Container>
     </footer>
   )

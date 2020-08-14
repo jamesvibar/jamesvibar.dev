@@ -16,25 +16,15 @@ const careerItems = [
   {
     title: 'PAST',
     items: [
-      [
-        'Redkite PH', 
-        'Feb 2019 - April 2019', 'Junior Web Developer'],
-      [
-        'Cmdigital.studio',
-        'Nov 2018 - Jan 2019',
-        'Freelance Web Developer',
-      ],
+      ['Redkite PH', 'Feb 2019 - April 2019', 'Junior Web Developer'],
+      ['Cmdigital.studio', 'Nov 2018 - Jan 2019', 'Freelance Web Developer'],
     ],
   },
   {
     title: 'PRESENT',
     items: [
       ['Social Space Inc.', 'May 2019 - Present', 'Web Developer'],
-      [
-        'Thrivehha.com',
-        'March 2019 - Present',
-        'Freelance Web Developer',
-      ],
+      ['Thrivehha.com', 'March 2019 - Present', 'Freelance Web Developer'],
     ],
   },
   {
@@ -205,8 +195,30 @@ const Home = () => (
         </Wrapper>
       </Container>
     </section>
-    <section>
-      CTA
+    <section
+      sx={{
+        backgroundColor: '#FFFAEE',
+        background:
+          'linear-gradient(180deg, rgba(255, 213, 82, 0.1) 0%, rgba(243, 61, 214, 0.13) 100%)',
+      }}
+    >
+      <Container>
+        <Wrapper>
+          <div
+            sx={{ textAlign: 'center', py: [6, null, 7], maxWidth: '600px', mx: 'auto' }}
+          >
+            <strong sx={{ color: 'primary', letterSpacing: 2 }}>
+              WHAT'S NEXT?
+            </strong>
+            <h2 sx={{ fontSize: 4, mt: 3, mb: 4 }}>Let's work together!</h2>
+            <p sx={{ fontSize: ['18px', '21px'], mb: 4 }}>
+              Think I might be helpful to your project? Take a minute and drop
+              me a message to my email, I’d love to hear about it.
+            </p>
+            <a href="mailto:hello@jamesvibar.dev" sx={{ fontSize: ['18px', '21px']}}>hello@jamesvibar.dev</a>
+          </div>
+        </Wrapper>
+      </Container>
     </section>
     <Footer />
   </>
