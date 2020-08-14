@@ -210,7 +210,7 @@ const Home = () => (
             <strong sx={{ color: 'primary', letterSpacing: 2 }}>
               WHAT'S NEXT?
             </strong>
-            <h2 sx={{ fontSize: 4, mt: 3, mb: 4 }}>Let's work together!</h2>
+            <h2 sx={{ fontSize: [3, null, 4], mt: 3, mb: 4 }}>Let's work together!</h2>
             <p sx={{ fontSize: ['18px', '21px'], mb: 4 }}>
               Think I might be helpful to your project? Take a minute and drop
               me a message to my email, I’d love to hear about it.
