@@ -5,6 +5,8 @@ import theme from '../theme'
 
 import 'normalize.css/normalize.css'
 
+const mainStyle = { overflow: 'hidden' }
+
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>

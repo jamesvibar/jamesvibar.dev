@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { jsx } from 'theme-ui'
 
-export default function button({ children, href, variant, ...props}) {
+export default function Button({ children, href, variant, ...props}) {
 
   if (href) {
     if (href.includes('https://') || href.includes('http://')) {

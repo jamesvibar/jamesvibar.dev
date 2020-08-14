@@ -32,7 +32,8 @@ export default {
       ...buttonBase,
       borderColor: 'primary',
       color: 'white',
-      backgroundColor: 'primary'
+      backgroundColor: 'primary',
+      boxShadow: '0px 10px 20px rgba(255, 0, 122, 0.18), 0px 2px 6px rgba(255, 0, 122, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04)'
     },
     secondary: {
       color: 'blue'
@@ -44,12 +45,19 @@ export default {
       backgroundColor: 'transparent'
     }
   },
-  fontSizes: [11, 14, 28, 42, 56, 70],
+  shadows: {
+    large: '0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04)'
+  },
+  fontSizes: [11, 16, 28, 42, 56, 70],
   styles: {
     root: {
       fontFamily: 'body',
       lineHeight: 1,
+      fontSize: 1,
       color: 'text',
+      '#__next': {
+        overflow: 'hidden'
+      },
       'h1,h2,h3,h4,h5,h6': {
         fontFamily: 'heading',
         color: 'heading',

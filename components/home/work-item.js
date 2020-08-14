@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 import Button from '../../elements/button'
 import { AiOutlineDeploymentUnit } from 'react-icons/ai'
 
-export default function workitem({ flip }) {
+export default function WorkItem({ flip }) {
   return (
     <div
       sx={{
@@ -12,7 +12,6 @@ export default function workitem({ flip }) {
         flexDirection: ['column', null, !flip ? 'row' : 'row-reverse'],
         alignItems: 'center',
         mb: 7,
-        mt: 6,
       }}
     >
       <div sx={{ flex: '1', maxWidth: ['100%', null, '500px'] }}>
