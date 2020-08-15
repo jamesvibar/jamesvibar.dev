@@ -16,12 +16,13 @@ export default function WorkItem({ flip }) {
     >
       <div sx={{ flex: '1', maxWidth: ['100%', null, '500px'] }}>
         <img
-          src="https://via.placeholder.com/800x600"
+          src="https://via.placeholder.com/800x600/FDE6A0/FF007A"
           sx={{
             width: '100%',
             display: 'block',
             borderRadius: '32px',
             marginLeft: !flip && 'auto',
+            boxShadow: 'large'
           }}
         />
       </div>

@@ -1,6 +1,7 @@
 // import App from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'theme-ui'
+import { AnimatePresence } from 'framer-motion'
 import theme from '../theme'
 
 import 'normalize.css/normalize.css'
@@ -9,8 +10,11 @@ const mainStyle = { overflow: 'hidden' }
 
 function MyApp({ Component, pageProps }) {
   return (
+    
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </ThemeProvider>
   )
 }

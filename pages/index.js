@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { jsx } from 'theme-ui'
+import { motion } from 'framer-motion'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -11,6 +12,20 @@ import Wrapper from '../elements/wrapper'
 import Button from '../elements/button'
 import CareerItem from '../components/home/career-item'
 import WorkItem from '../components/home/work-item'
+
+const fadeInUp = {
+  visible: { opacity: 1, translateY: 0, scale: 1 },
+  hidden: { opacity: 0, translateY: 60, scale: 0.95 },
+}
+
+const fadeIn = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
+
+const staggerFadeInUp = {
+  visible: { transition: { staggerChildren: 0.1 } },
+}
 
 const careerItems = [
   {
@@ -43,7 +58,11 @@ const Home = () => (
     <Header />
 
     <section sx={{ marginBottom: 6 }}>
-      <div
+      <motion.div
+        variants={fadeIn}
+        animate="visible"
+        initial="hidden"
+        transition={{ delay: 1 }}
         sx={{
           position: 'absolute',
           top: 0,
@@ -58,37 +77,55 @@ const Home = () => (
           sx={{ display: ['none', null, 'block'] }}
         />
         <HeroBgImg src="/images/svg/hero-bg.svg" flip sx={{ right: 0 }} />
-      </div>
+      </motion.div>
       <Container>
         <Wrapper>
-          <div
+          <motion.div
             sx={{ textAlign: 'center', pt: [5, 6], maxWidth: 615, mx: 'auto' }}
+            initial="hidden"
+            animate="visible"
+            variants={staggerFadeInUp}
           >
-            <div sx={{ position: 'relative' }}>
-              <img
+            <div
+              sx={{ position: 'relative' }}
+            >
+              <motion.img
                 src="/images/svg/hero-accent.svg"
                 sx={{ position: 'absolute', top: '-40%', left: 0 }}
+                animate={{ translateY: 0, translateX: 0, opacity: 1 }}
+                initial={{ translateY: -36, translateX: -36, opacity: 0 }}
               />
               <h1 sx={{ fontSize: [4, 5], mb: 3, lineHeight: 1.15 }}>
-                Kumusta!
-                <br /> I'm James.
+                <motion.span
+                  style={{ display: 'inline-block' }}
+                  variants={fadeInUp}
+                >
+                  Kumusta!
+                </motion.span>
+                <br />
+                <motion.span
+                  style={{ display: 'inline-block' }}
+                  variants={fadeInUp}
+                >
+                  I'm James.
+                </motion.span>
               </h1>
             </div>
             <div sx={{ fontSize: ['18px', '21px'] }}>
-              <p>
+              <motion.p variants={fadeInUp}>
                 <small>"Kumusta is the proper Filipino word for "Hello".</small>
-              </p>
-              <p>
+              </motion.p>
+              <motion.p variants={fadeInUp}>
                 I'm a self-taught web developer based in the Philippines with
                 experience in building modern websites and web applications.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p variants={fadeInUp}>
                 Learn more <a href="#">about me</a> or jump straight to{' '}
                 <a href="#">my work.</a>
-              </p>
+              </motion.p>
+              <motion.img variants={fadeInUp} src="/images/svg/hero-scroll.svg" sx={{ mt: 3 }} />
             </div>
-            <img src="/images/svg/hero-scroll.svg" sx={{ mt: 3 }} />
-          </div>
+          </motion.div>
         </Wrapper>
       </Container>
     </section>
@@ -205,17 +242,29 @@ const Home = () => (
       <Container>
         <Wrapper>
           <div
-            sx={{ textAlign: 'center', py: [6, null, 7], maxWidth: '600px', mx: 'auto' }}
+            sx={{
+              textAlign: 'center',
+              py: [6, null, 7],
+              maxWidth: '600px',
+              mx: 'auto',
+            }}
           >
             <strong sx={{ color: 'primary', letterSpacing: 2 }}>
               WHAT'S NEXT?
             </strong>
-            <h2 sx={{ fontSize: [3, null, 4], mt: 3, mb: 4 }}>Let's work together!</h2>
+            <h2 sx={{ fontSize: [3, null, 4], mt: 3, mb: 4 }}>
+              Let's work together!
+            </h2>
             <p sx={{ fontSize: ['18px', '21px'], mb: 4 }}>
               Think I might be helpful to your project? Take a minute and drop
               me a message to my email, I’d love to hear about it.
             </p>
-            <a href="mailto:hello@jamesvibar.dev" sx={{ fontSize: ['18px', '21px']}}>hello@jamesvibar.dev</a>
+            <a
+              href="mailto:hello@jamesvibar.dev"
+              sx={{ fontSize: ['18px', '21px'] }}
+            >
+              hello@jamesvibar.dev
+            </a>
           </div>
         </Wrapper>
       </Container>

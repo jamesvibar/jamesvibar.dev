@@ -12,10 +12,7 @@ export default function CareerItem({ title, items, ...props }) {
         boxShadow: 'large',
         borderRadius: '18px',
         padding: '28px 18px',
-        // flex: 1,
-        // mx: [0, null, 2],
         position: 'relative',
-        // width: '100%'
         alignSelf: 'flex-start',
         gridColumn: isFuture && ['auto', 'span 2', 'auto'],
         textAlign: isFuture && [null, 'center', 'left'],

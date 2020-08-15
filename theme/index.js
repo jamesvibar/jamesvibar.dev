@@ -13,6 +13,7 @@ const buttonBase = {
   cursor: 'pointer',
   textDecoration: 'none',
   fontSize: 1,
+  outline: 0,
 }
 
 export default {
@@ -33,7 +34,10 @@ export default {
       borderColor: 'primary',
       color: 'white',
       backgroundColor: 'primary',
-      boxShadow: '0px 10px 20px rgba(255, 0, 122, 0.18), 0px 2px 6px rgba(255, 0, 122, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04)'
+      boxShadow: '0px 10px 20px rgba(255, 0, 122, 0.18), 0px 2px 6px rgba(255, 0, 122, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04)',
+      '&:hover': {
+        color: 'white'
+      }
     },
     secondary: {
       color: 'blue'
@@ -42,7 +46,10 @@ export default {
       ...buttonBase,
       borderColor: 'primary',
       color: 'primary',
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
+      '&:hover': {
+        color: 'primary'
+      }
     }
   },
   shadows: {

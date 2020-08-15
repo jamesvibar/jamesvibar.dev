@@ -2,9 +2,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { jsx } from 'theme-ui'
+import { motion } from 'framer-motion'
 
-export default function Button({ children, href, variant, ...props}) {
-
+export default function Button({ children, href, variant, ...props }) {
   if (href) {
     if (href.includes('https://') || href.includes('http://')) {
       return (
@@ -16,9 +16,14 @@ export default function Button({ children, href, variant, ...props}) {
 
     return (
       <Link href={href} passHref>
-        <a sx={{ variant }} {...props}>
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1 }}
+          sx={{ variant }}
+          {...props}
+        >
           {children}
-        </a>
+        </motion.a>
       </Link>
     )
   }
