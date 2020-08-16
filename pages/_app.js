@@ -8,13 +8,13 @@ import 'normalize.css/normalize.css'
 
 const mainStyle = { overflow: 'hidden' }
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </AnimatePresence>
+    <ThemeProvider theme={theme}>
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </ThemeProvider>
   )
 }
 

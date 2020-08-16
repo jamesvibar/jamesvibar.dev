@@ -3,6 +3,7 @@ import React from 'react'
 
 import Header from './header'
 import Footer from './footer'
+import { motion } from 'framer-motion'
 
 export default function Layout({ title, children }) {
   return (
@@ -12,7 +13,9 @@ export default function Layout({ title, children }) {
       </Head>
 
       <Header />
-      {children}
+      <motion.div exit={{ opacity: 0, transition: { duration: 0.7 } }}>
+        {children}
+      </motion.div>
       <Footer />
     </>
   )
