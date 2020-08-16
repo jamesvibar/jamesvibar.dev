@@ -45,7 +45,7 @@ const NavList = () => {
     >
       {navigation.map((item) => (
         <li key={item.title}>
-          <NavLink href="/test">{item.title}</NavLink>
+          <NavLink href={`${item?.href}`}>{item.title}</NavLink>
         </li>
       ))}
     </ul>

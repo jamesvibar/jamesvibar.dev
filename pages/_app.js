@@ -10,12 +10,11 @@ const mainStyle = { overflow: 'hidden' }
 
 function MyApp({ Component, pageProps }) {
   return (
-    
-    <ThemeProvider theme={theme}>
-      <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter>
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-      </AnimatePresence>
-    </ThemeProvider>
+      </ThemeProvider>
+    </AnimatePresence>
   )
 }
 

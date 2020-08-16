@@ -1,11 +1,12 @@
 export const navigation = [
   {
-    'title': 'ABOUT ME',
+    title: 'ABOUT ME',
+    href: '/about-me'
   },
   {
-    'title': 'PROJECTS',
+    title: 'PROJECTS',
   },
   {
-    'title': 'SAY HELLO'
+    title: 'SAY HELLO'
   }
 ]

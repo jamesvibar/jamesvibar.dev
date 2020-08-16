@@ -5,23 +5,13 @@ import Head from 'next/head'
 import { jsx } from 'theme-ui'
 import { motion } from 'framer-motion'
 
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Container from '../elements/container'
 import Wrapper from '../elements/wrapper'
 import Button from '../elements/button'
+import Page from '../components/page'
 import CareerItem from '../components/home/career-item'
 import WorkItem from '../components/home/work-item'
-
-const fadeInUp = {
-  visible: { opacity: 1, translateY: 0, scale: 1 },
-  hidden: { opacity: 0, translateY: 60, scale: 0.95 },
-}
-
-const fadeIn = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-}
+import { fadeIn, fadeInUp } from '../animations'
 
 const staggerFadeInUp = {
   visible: { transition: { staggerChildren: 0.1 } },
@@ -49,20 +39,13 @@ const careerItems = [
 ]
 
 const Home = () => (
-  <>
-    <Head>
-      <title>James Vibar - Web Developer</title>
-      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    </Head>
-
-    <Header />
-
+  <Page title="Home">
     <section sx={{ marginBottom: 6 }}>
       <motion.div
         variants={fadeIn}
         animate="visible"
         initial="hidden"
-        transition={{ delay: 1 }}
+        transition={{ delay: .7 }}
         sx={{
           position: 'absolute',
           top: 0,
@@ -269,8 +252,7 @@ const Home = () => (
         </Wrapper>
       </Container>
     </section>
-    <Footer />
-  </>
+  </Page>
 )
 
 const HeroBgImg = ({ src, flip, ...rest }) => {
