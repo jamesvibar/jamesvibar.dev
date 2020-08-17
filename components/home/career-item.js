@@ -1,12 +1,15 @@
 /** @jsx jsx */
 import React from 'react'
+import { motion } from 'framer-motion'
 import { jsx } from 'theme-ui'
+import { fadeInUp } from '../../animations'
 
 export default function CareerItem({ title, items, ...props }) {
   const isFuture = title.toUpperCase() === 'FUTURE'
 
   return (
-    <div
+    <motion.div
+      variants={fadeInUp}
       sx={{
         backgroundColor: 'white',
         boxShadow: 'large',
@@ -86,6 +89,6 @@ export default function CareerItem({ title, items, ...props }) {
           })}
         </>
       )}
-    </div>
+    </motion.div>
   )
 }

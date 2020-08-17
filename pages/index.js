@@ -210,7 +210,8 @@ const Home = () => {
                       sx={{
                         display: 'flex',
                         justifyContent: 'space-between',
-                        alignItems: 'center',
+                        flexDirection: ['column', 'row'],
+                        alignItems: ['flex-start', 'center'],
                       }}
                     >
                       <motion.p
@@ -248,17 +249,15 @@ const Home = () => {
                   >
                     {careerItems.map(({ title, items }, index) => {
                       return (
-                        <motion.div variants={fadeInUp}>
-                          <CareerItem
-                            sx={{
-                              ml: index === 0 && 0,
-                              mr: index === careerItems.length - 1 && 0,
-                            }}
-                            key={title}
-                            title={title}
-                            items={items}
-                          />
-                        </motion.div>
+                        <CareerItem
+                          sx={{
+                            ml: index === 0 && 0,
+                            mr: index === careerItems.length - 1 && 0,
+                          }}
+                          key={title}
+                          title={title}
+                          items={items}
+                        />
                       )
                     })}
                   </motion.div>
