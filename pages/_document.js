@@ -17,7 +17,7 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
