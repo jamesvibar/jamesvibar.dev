@@ -37,8 +37,10 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const projects = getAllProjects({fields: ['slug', 'comingSoon']})
 
+  const filteredProjects = projects.filter(project => project.comingSoon !== true)
+
   return {
-    paths: projects.map(({ slug }) => {
+    paths: filteredProjects.map(({ slug }) => {
       return {
         params: {
           slug

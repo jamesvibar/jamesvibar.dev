@@ -5,6 +5,7 @@ import { jsx } from 'theme-ui'
 import { motion } from 'framer-motion'
 
 export default function Button({ children, href, variant, ...props }) {
+
   if (href) {
     if (href.includes('https://') || href.includes('http://')) {
       return (

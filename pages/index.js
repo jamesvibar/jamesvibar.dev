@@ -17,6 +17,7 @@ import {
   IntersectionObserver,
   IntersectionContext,
 } from '../components/intersection-observer'
+import { getAllProjects } from '../lib/api'
 import { fadeIn, fadeInUp, staggerFadeInUp } from '../animations'
 
 const careerItems = [
@@ -40,7 +41,7 @@ const careerItems = [
   },
 ]
 
-const Home = () => {
+const Home = ({ projects }) => {
   const { inView } = useContext(IntersectionContext)
 
   return (
@@ -177,9 +178,9 @@ const Home = () => {
                 )}
               </IntersectionObserver>
               <div sx={{ mt: 6 }}>
-                <WorkItem />
-                <WorkItem flip />
-                <WorkItem />
+                {projects.map((project, index) => (
+                  <WorkItem key={project.title} flip={index % 2} project={project}/>
+                ))}
               </div>
             </Wrapper>
           </Container>
@@ -366,6 +367,16 @@ const ContainerAccent = ({ src, flip, ...rest }) => {
       {...rest}
     />
   )
+}
+
+export async function getStaticProps() {
+  const projects = getAllProjects({ fields: ['slug', 'description', 'date', 'comingSoon', 'websiteLink', 'thumbnail', 'title', 'stack']})
+
+  return {
+    props: {
+      projects
+    }
+  }
 }
 
 export default Home
