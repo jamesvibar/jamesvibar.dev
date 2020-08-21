@@ -43,18 +43,20 @@ const NavList = () => {
         display: ['none', null, 'flex'],
       }}
     >
-      {navigation.map((item) => (
-        <li key={item.title}>
-          <NavLink href={`${item?.href}`}>{item.title}</NavLink>
+      {navigation.map((item, index) => (
+        <li key={`navlink-${index}`}>
+          <NavLink href={`${item?.href}`} {...item}>
+            {item.title}
+          </NavLink>
         </li>
       ))}
     </ul>
   )
 }
 
-const NavLink = (props) => {
+const NavLink = ({ href, children }) => {
   return (
-    <Link {...props} passHref>
+    <Link href={href} passHref>
       <a
         sx={{
           color: 'heading',
@@ -64,11 +66,11 @@ const NavLink = (props) => {
           fontWeight: 'bold',
           letterSpacing: 1,
           '&:hover': {
-            color: 'primary'
-          }
+            color: 'primary',
+          },
         }}
       >
-        {props.children}
+        {children}
       </a>
     </Link>
   )

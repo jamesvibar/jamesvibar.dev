@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { jsx } from 'theme-ui'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Element, Link as ScrollLink } from 'react-scroll'
 
 import Container from '../elements/container'
 import Wrapper from '../elements/wrapper'
@@ -112,8 +113,16 @@ const Home = () => {
                   experience in building modern websites and web applications.
                 </motion.p>
                 <motion.p variants={fadeInUp}>
-                  Learn more <a href="#">about me</a> or jump straight to{' '}
-                  <a href="#">my work.</a>
+                  Learn more{' '}
+                  <Link href="/about-me">
+                    <a>about me</a>
+                  </Link>{' '}
+                  or jump straight to{' '}
+                  <ScrollLink
+                    to="projects"
+                    smooth={true}
+                    sx={{ textDecoration: 'underline', cursor: 'pointer' }}
+                  >my work</ScrollLink>.
                 </motion.p>
                 <motion.img
                   variants={fadeInUp}
@@ -126,54 +135,56 @@ const Home = () => {
         </Container>
       </section>
 
-      <section sx={{ mb: 6 }}>
-        <Container>
-          <Wrapper>
-            <div
-              sx={{
-                position: 'absolute',
-                background:
-                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%), #FFF9E6',
-                height: '1000px',
-                top: -32,
-                left: -42,
-                right: -42,
-                zIndex: -1,
-              }}
-            >
-              <ContainerAccent
-                src="/images/svg/pink-accent.svg"
-                sx={{ right: '-42px', top: '-32px' }}
-              />
-            </div>
-            <IntersectionObserver options={{ triggerOnce: true }}>
-              {({ inView }) => (
-                <motion.div
-                  sx={{ mt: [6, 7], pt: 4 }}
-                  initial="hidden"
-                  animate={inView ? 'visible' : 'hidden'}
-                  variants={staggerFadeInUp}
-                >
-                  <motion.h2 sx={{ fontSize: 3 }} variants={fadeInUp}>
-                    Some of my work.
-                  </motion.h2>
-                  <motion.p
-                    sx={{ fontSize: ['18px', '21px'], my: 0 }}
-                    variants={fadeInUp}
+      <Element name="projects">
+        <section sx={{ mb: 6 }}>
+          <Container>
+            <Wrapper>
+              <div
+                sx={{
+                  position: 'absolute',
+                  background:
+                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%), #FFF9E6',
+                  height: '1000px',
+                  top: -32,
+                  left: -42,
+                  right: -42,
+                  zIndex: -1,
+                }}
+              >
+                <ContainerAccent
+                  src="/images/svg/pink-accent.svg"
+                  sx={{ right: '-42px', top: '-32px' }}
+                />
+              </div>
+              <IntersectionObserver options={{ triggerOnce: true }}>
+                {({ inView }) => (
+                  <motion.div
+                    sx={{ mt: [6, 7], pt: 4 }}
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={staggerFadeInUp}
                   >
-                    Projects that I have created or have been part of.
-                  </motion.p>
-                </motion.div>
-              )}
-            </IntersectionObserver>
-            <div sx={{ mt: 6 }}>
-              <WorkItem />
-              <WorkItem flip />
-              <WorkItem />
-            </div>
-          </Wrapper>
-        </Container>
-      </section>
+                    <motion.h2 sx={{ fontSize: 3 }} variants={fadeInUp}>
+                      Some of my work.
+                    </motion.h2>
+                    <motion.p
+                      sx={{ fontSize: ['18px', '21px'], my: 0 }}
+                      variants={fadeInUp}
+                    >
+                      Projects that I have created or have been part of.
+                    </motion.p>
+                  </motion.div>
+                )}
+              </IntersectionObserver>
+              <div sx={{ mt: 6 }}>
+                <WorkItem />
+                <WorkItem flip />
+                <WorkItem />
+              </div>
+            </Wrapper>
+          </Container>
+        </section>
+      </Element>
       <section sx={{ mb: 6 }}>
         <Container>
           <Wrapper>
@@ -267,6 +278,7 @@ const Home = () => {
           </Wrapper>
         </Container>
       </section>
+
       <section
         sx={{
           backgroundColor: '#FFFAEE',
