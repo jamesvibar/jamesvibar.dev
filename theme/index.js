@@ -22,10 +22,11 @@ const theme = {
     body: '"Poppins", sans-serif',
   },
   colors: {
+    primary: '#FF007A',
+    secondary: '#1FCDC3',
     text: '#45539C',
     heading: '#000469',
     background: '#fff',
-    primary: '#FF007A',
     earlyDawn: '#FFF9E6',
   },
   button: {
