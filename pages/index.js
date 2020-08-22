@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useContext } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { jsx } from 'theme-ui'
@@ -13,10 +13,7 @@ import Button from '../elements/button'
 import Page from '../components/page'
 import CareerItem from '../components/home/career-item'
 import WorkItem from '../components/home/work-item'
-import {
-  IntersectionObserver,
-  IntersectionContext,
-} from '../components/intersection-observer'
+import { IntersectionObserver } from '../components/intersection-observer'
 import { getAllProjects } from '../lib/api'
 import { fadeIn, fadeInUp, staggerFadeInUp } from '../animations'
 
@@ -42,8 +39,6 @@ const careerItems = [
 ]
 
 const Home = ({ projects }) => {
-  const { inView } = useContext(IntersectionContext)
-
   return (
     <Page title="Home">
       <section sx={{ marginBottom: 6 }}>
@@ -123,7 +118,10 @@ const Home = ({ projects }) => {
                     to="projects"
                     smooth={true}
                     sx={{ textDecoration: 'underline', cursor: 'pointer' }}
-                  >my work</ScrollLink>.
+                  >
+                    my work
+                  </ScrollLink>
+                  .
                 </motion.p>
                 <motion.img
                   variants={fadeInUp}
@@ -179,7 +177,11 @@ const Home = ({ projects }) => {
               </IntersectionObserver>
               <div sx={{ mt: 6 }}>
                 {projects.map((project, index) => (
-                  <WorkItem key={project.title} flip={index % 2} project={project}/>
+                  <WorkItem
+                    key={project.title}
+                    flip={index % 2}
+                    project={project}
+                  />
                 ))}
               </div>
             </Wrapper>
@@ -370,12 +372,23 @@ const ContainerAccent = ({ src, flip, ...rest }) => {
 }
 
 export async function getStaticProps() {
-  const projects = getAllProjects({ fields: ['slug', 'description', 'date', 'comingSoon', 'websiteLink', 'thumbnail', 'title', 'stack']})
+  const projects = getAllProjects({
+    fields: [
+      'slug',
+      'description',
+      'date',
+      'comingSoon',
+      'websiteLink',
+      'thumbnail',
+      'title',
+      'stack',
+    ],
+  })
 
   return {
     props: {
-      projects
-    }
+      projects,
+    },
   }
 }
 

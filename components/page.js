@@ -19,6 +19,8 @@ export default function Layout({ title, children }) {
         target="_blank"
         sx={{
           backgroundColor: 'secondary',
+          position: 'relative',
+          zIndex: 999,
           color: 'heading',
           fontSize: ['13px', '16px'],
           textAlign: 'center',

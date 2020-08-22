@@ -1,12 +1,47 @@
 // import App from 'next/app'
 import React from 'react'
+import Router from 'next/router'
 import { ThemeProvider } from 'theme-ui'
 import { AnimatePresence } from 'framer-motion'
+import NProgress from 'nprogress'
 import theme from '../theme'
 
 import 'normalize.css/normalize.css'
+import '../styles/nprogress.css'
 
-const mainStyle = { overflow: 'hidden' }
+let timer;
+let state;
+let activeRequests = 0
+const delay = 250;
+
+// NProgress.configure({ showSpinner: false })
+
+function load() {
+  if (state === 'loading'){
+    return;
+  }
+
+  state = 'loading'
+
+  timer = setTimeout(() => {
+    NProgress.start()
+  }, delay)
+}
+
+function stop() {
+  if (activeRequests > 0) {
+    return;
+  }
+
+  state = 'stop'
+  
+  clearTimeout(timer)
+  NProgress.done()
+}
+
+Router.events.on('routeChangeStart', load)
+Router.events.on('routeChangeComplete', stop)
+Router.events.on('routeChangeError', stop)
 
 function MyApp({ Component, pageProps, router }) {
   return (
