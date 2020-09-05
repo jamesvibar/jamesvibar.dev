@@ -5,7 +5,7 @@ description: |
 date: '2018-01-21'
 comingSoon: true
 websiteLink: 'https://thrivehha.com'
-thumbnail: 'https://via.placeholder.com/800x600/FDE6A0/FF007A'
+thumbnail: '/images/projects/thrivehha-thumbnail.jpg'
 stack:
   - GatsbyJS
 ---

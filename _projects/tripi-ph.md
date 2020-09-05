@@ -5,7 +5,7 @@ description: |
 date: '2020-08-21'
 comingSoon: true
 websiteLink: 'https://tripi.ph'
-thumbnail: 'https://via.placeholder.com/800x600/FDE6A0/FF007A'
+thumbnail: '/images/projects/tripi-thumbnail.jpg'
 stack:
   - Odoo
 ---

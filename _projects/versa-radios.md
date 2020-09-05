@@ -5,7 +5,7 @@ description: |
 date: '2019-07-01'
 comingSoon: true
 websiteLink: 'https://versaradios.com'
-thumbnail: 'https://via.placeholder.com/800x600/FDE6A0/FF007A'
+thumbnail: '/images/projects/versa-thumbnail.jpg'
 stack:
   - WordPress
 ---

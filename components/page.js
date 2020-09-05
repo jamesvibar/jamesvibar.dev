@@ -26,7 +26,7 @@ export default function Layout({ title, children }) {
           textAlign: 'center',
           py: 2,
           display: 'block',
-          textDecoration: 'underline'
+          textDecoration: 'none'
         }}
       >
         Want to see under the hood? This website is open source!

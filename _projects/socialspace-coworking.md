@@ -5,7 +5,7 @@ description: |
 date: '2019-06-21'
 comingSoon: true
 websiteLink: 'https://socialspacecoworking.com'
-thumbnail: 'https://via.placeholder.com/800x600/FDE6A0/FF007A'
+thumbnail: '/images/projects/socialspace-thumbnail.jpg'
 stack:
   - GatsbyJS
 ---
