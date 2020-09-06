@@ -144,7 +144,7 @@ export default function WorkItem({ flip, project }) {
               </motion.strong>
               <motion.div
                 variants={fadeInUp}
-                sx={{ my: 3, display: 'flex', alignItems: 'center' }}
+                sx={{ my: 3, display: 'flex', alignItems: 'center', flexWrap: 'wrap', lineHeight: '2rem' }}
               >
                 <AiOutlineDeploymentUnit />
                 {project.stack.map((item) => (
