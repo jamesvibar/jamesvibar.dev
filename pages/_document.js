@@ -18,6 +18,21 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-177344923-1"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-177344923-1');
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
