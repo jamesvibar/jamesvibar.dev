@@ -22,7 +22,7 @@ export default function Page({ title, children }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={parsedTitle} />
         <meta property="og:description" content={seo.description} />
-        <meta property="og:image" content="/images/ogimage.jpg" />
+        <meta property="og:image" content="https://jamesvibar.dev/images/ogimage.jpg" />
       </Head>
 
       <a
