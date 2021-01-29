@@ -21,7 +21,6 @@ const careerItems = [
   {
     title: 'PAST',
     items: [
-      ['Redkite PH', '2/2019 - 4/2019', 'Junior Web Developer'],
       ['Thrivehha.com', '3/2019 - 5/2019', 'Freelance Web Developer'],
       ['Cmdigital.studio', '11/2018 - 1/2019', 'Freelance Web Developer'],
     ],
@@ -29,7 +28,7 @@ const careerItems = [
   {
     title: 'PRESENT',
     items: [
-      ['Social Space Inc.', '5/2019 - Present', 'Web Developer'],
+      ['Social Space Inc.', '5/2019 - Present', 'Lead Web Developer'],
     ],
   },
   {

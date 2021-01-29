@@ -7,7 +7,7 @@ comingSoon: true
 websiteLink: 'https://thrivehha.com'
 thumbnail: '/images/projects/thrivehha-thumbnail.jpg'
 stack:
-  - GatsbyJS
+  - React - Gatsby
 ---
 
 # Tripi.ph
