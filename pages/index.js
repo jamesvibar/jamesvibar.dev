@@ -28,7 +28,7 @@ const careerItems = [
   {
     title: 'PRESENT',
     items: [
-      ['Social Space Inc.', '5/2019 - Present', 'Lead Web Developer'],
+      ['Pelago Inc.', '5/2019 - Present', 'Senior Web Developer'],
     ],
   },
   {

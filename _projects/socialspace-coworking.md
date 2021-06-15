@@ -7,7 +7,7 @@ comingSoon: true
 websiteLink: 'https://socialspacecoworking.com'
 thumbnail: '/images/projects/socialspace-thumbnail.jpg'
 stack:
-  - React - Gatsby
+  - ReactJS (GatsbyJS)
 ---
 
 # Tripi.ph
