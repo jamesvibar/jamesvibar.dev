@@ -97,13 +97,20 @@ export default function AboutMe() {
                     initial="hidden"
                   >
                     <motion.p variants={fadeInUp}>
-                      <strong sx={{ color: 'heading' }}>Hey!</strong>
+                      <strong sx={{ color: 'heading' }}>Hello!</strong>
                     </motion.p>
                     <motion.p variants={fadeInUp}>
-                      I’m a web developer currently working here at SocialSpace
-                      Inc., where I’m mostly involved with front-end web
-                      development. I'm passionate about creating awesome
-                      websites/web applications with modern tools.
+                      I’m a senior web developer currently working at Pelago
+                      Inc., where I am part of a small team that develops websites
+                      and web applications for clients.
+                    </motion.p>
+                    <motion.p variants={fadeInUp}>
+                      In work, I am mostly involved with Python and Odoo ERP, creating
+                      extensions or applications to meet business requirements, integration
+                      of third-party APIs like PayMongo and DragonPay to generate sales, and
+                      the modification of core modules of Odoo to meet the specific use
+                      cases of the team. I also handle releases using docker and general server administration
+                      of droplets in DigitalOcean.
                     </motion.p>
                     <motion.p variants={fadeInUp}>
                       I'm a graduate of Lyceum of the Philippines University
@@ -112,16 +119,11 @@ export default function AboutMe() {
                       self-taught.
                     </motion.p>
                     <motion.p variants={fadeInUp}>
-                      In work, we mainly use WordPress to power our websites.
-                      Aside from WordPress, we also use the JAMStack if it fits
-                      the requirement. I’m most comfortable working with
-                      React.js, Next.js and Gatsby.js when it comes to building
-                      websites.
-                    </motion.p>
-                    <motion.p variants={fadeInUp}>
-                      Apart from front-end development, I also do some back-end
-                      development with Node.js, I use Express.js to power the
-                      RESTful APIs of my projects.
+                      Apart from front-end development, I love to explore new technologies
+                      like creating discord bots with Discord.js, currently I'm working on having fun
+                      with mobile app development with Ionic/Flutter and React Native.
+                      I also do back-end development with Node.js, I use Express.js, Strapi among many things
+                      to power the RESTful APIs of my projects.
                     </motion.p>
                   </motion.div>
                 )}
