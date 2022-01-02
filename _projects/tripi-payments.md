@@ -1,15 +1,15 @@
 ---
-title: 'Tripi Payments'
+title: 'MFI Payments'
 description: |
-  Tripi payments is a credit card payment gateway, it uses the PayMongo api to process credit card payments for the users of Tripi.ph.
+  MFI payments is an interface for credit card payments for MoveForward PH. It communicates with PayMongo - a payment gateway provider, and allows their customers to checkout using their credit card.
 date: '2021-01-08'
 comingSoon: true
-websiteLink: 'https://payments.tripi.ph'
+websiteLink: 'https://payments.moveforward.ph'
 thumbnail: '/images/projects/payments-tripi-thumbnail.jpg'
 stack:
-  - ReactJS (NextJS)
+  - Next.JS
 ---
 
-# Tripi.ph
+# MFI Payments
 
 Coming soon

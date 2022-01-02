@@ -21,14 +21,14 @@ const careerItems = [
   {
     title: 'PAST',
     items: [
-      ['Thrivehha.com', '3/2019 - 5/2019', 'Freelance Web Developer'],
-      ['Cmdigital.studio', '11/2018 - 1/2019', 'Freelance Web Developer'],
+      ['SocialSpace Coworking', 'May 2019 - Feb 2021', 'Web Developer'],
+      ['Redkite PH', 'Feb 2019 - April 2019', 'Web Developer'],
     ],
   },
   {
     title: 'PRESENT',
     items: [
-      ['Pelago Inc.', '5/2019 - Present', 'Senior Web Developer'],
+      ['Pelago Inc.', 'Feb 2021 - Present', 'Senior Web Developer'],
     ],
   },
   {
@@ -236,7 +236,7 @@ const Home = ({ projects }) => {
                       <motion.div variants={fadeIn}>
                         <Button
                           sx={{ variant: 'button.primary' }}
-                          href="/jamesvibar-resume.pdf"
+                          href="/cv.pdf"
                           target="_blank"
                         >
                           Get My Resume
