@@ -236,7 +236,7 @@ const Home = ({ projects }) => {
                       <motion.div variants={fadeIn}>
                         <Button
                           sx={{ variant: 'button.primary' }}
-                          href="/cv.pdf"
+                          href="/cv2.pdf"
                           target="_blank"
                         >
                           Get My Resume
