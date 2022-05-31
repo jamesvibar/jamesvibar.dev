@@ -23,12 +23,13 @@ const careerItems = [
     items: [
       ['SocialSpace Coworking', 'May 2019 - Feb 2021', 'Web Developer'],
       ['Redkite PH', 'Feb 2019 - April 2019', 'Web Developer'],
+      ['Pelago Inc.', 'Feb 2021 - Feb 2022', 'Senior Web Developer'],
     ],
   },
   {
     title: 'PRESENT',
     items: [
-      ['Pelago Inc.', 'Feb 2021 - Present', 'Senior Web Developer'],
+      ['Magic Inc.', 'Feb 2022 - Present', 'Web Designer & Developer'],
     ],
   },
   {
@@ -236,7 +237,7 @@ const Home = ({ projects }) => {
                       <motion.div variants={fadeIn}>
                         <Button
                           sx={{ variant: 'button.primary' }}
-                          href="/cv3.pdf"
+                          href="/cv4.pdf"
                           target="_blank"
                         >
                           Get My Resume
