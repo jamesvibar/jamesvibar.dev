@@ -33,6 +33,12 @@ class MyDocument extends Document {
           `,
             }}
           />
+          <script type='text/javascript' src='//static.queue-it.net/script/queueclient.min.js'></script>
+          <script
+             data-queueit-c='jamesvibar'
+             type='text/javascript'
+             src='//static.queue-it.net/script/queueconfigloader.min.js'>
+          </script>
         </Head>
         <body>
           <Main />
